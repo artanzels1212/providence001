@@ -11,8 +11,19 @@
 	<%#do nothing%>
 <%else%>
 	<%=render 'dash/dash'%>
-<%end%>	
+<%end%>
+	<!-- flash section -->
+	<div id="cc" style="width:88%;margin:0 auto;padding:2%;padding-left:5%;position:absolute;left:30%;transform:translate(0,-30%);top:3%;cursor: pointer; cursor: hand;">	
+		<%if notice%>
+	   <p class="notice" style="background-color:#eeeeee;color:black;position:absolute;top:20px;z-index:200;text-align:center;"><%= notice %></p>
+	   <%end%>
+	   <%if alert %>
+	   <p class="alert" style="background-color:#eeeeee;color:black;position:absolute;top:20px;z-index:200;text-align:center;"><%= alert %></p>
+	   	<%end%>
+   	</div>
+
 <%= yield %>
+
 <%if params[:controller].to_s == "home"%>
 	<%#do nothing%>
 <%else%>
@@ -24,6 +35,10 @@
 		<%end%>
 	</div>
 <%end%>	
-
+<%=javascript_tag do%>
+	$('#cc').click(function(){
+		$('#cc').slideUp('slow');
+	});
+<%end%>
 </body>
 </html>
