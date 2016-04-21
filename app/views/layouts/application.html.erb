@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Providenceedu.in</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%if params[:controller].to_s == "home"%>
+	<%#do nothing%>
+<%else%>
+	<%=render 'dash/dash'%>
+<%end%>	
+<%= yield %>
+<%if params[:controller].to_s == "home"%>
+	<%#do nothing%>
+<%else%>
+	<div id="log1">
+		<%if user_signed_in? %>
+			<p>Hello, <%=current_user.email%> | <%=link_to "Sign_out", destroy_user_session_path,method: 'delete'%></p>
+		<%else%>
+			<p><%=link_to 'Log In', new_user_session_path%></p>
+		<%end%>
+	</div>
+<%end%>	
+
+</body>
+</html>
