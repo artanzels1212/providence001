@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420120345) do
+ActiveRecord::Schema.define(version: 20160430062104) do
 
   create_table "about_pages", force: :cascade do |t|
     t.string   "img_file_name"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 20160420120345) do
     t.text     "extra"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "banner_sections", force: :cascade do |t|
+    t.string   "banner_img_file_name"
+    t.string   "banner_img_content_type"
+    t.integer  "banner_img_file_size"
+    t.datetime "banner_img_updated_at"
+    t.string   "banner_heading",          limit: 100
+    t.string   "banner_button_text",      limit: 20
+    t.string   "banner_button_url"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   create_table "carrer_pages", force: :cascade do |t|

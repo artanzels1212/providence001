@@ -1,0 +1,30 @@
+<style type="text/css">
+	#jumpingArrow{position: absolute;z-index: 100;left:29%;bottom:15.9%;}
+</style>
+<%bc = BannerSection.last%>
+<section class="hero" style="background-image:url(<%=bc.banner_img(:medium)%>)">
+				<div class="texture-overlay"></div>
+				<div class="container">
+					<div class="row nav-wrapper">
+						<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+							<a id="logo-img" href="<%=root_path%>"><img src="<%=asset_path 'logo.png'%>" width="270px" alt="providence-logo"></a>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+							<p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+						</div>
+					</div>
+					<div class="row hero-content">
+						<div class="col-md-12">
+							<h1 class="animated fadeInDown"><%=bc.banner_heading.capitalize%></h1>
+							<a href="<%=bc.banner_button_url%>" class="use-btn animated fadeInUp"><%=bc.banner_button_text%></a> 
+							<span id="jumpingArrow" class="fa fa-arrow-down fa-4x"></span>
+							<a href="<%=bc.banner_button_url%>" class="use-btn use-btn2 animated fadeInUp">Free Capsule Classes</a> 
+							<a href="#about" class="learn-btn animated fadeInUp">Learn more <i class="fa fa-arrow-down"></i></a>
+						</div>
+					</div>
+				</div>
+</section>
+
+<%=javascript_tag do%>
+	
+<%end%>

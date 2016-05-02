@@ -11,11 +11,11 @@
  * file per style scope.
  *
  *= require_tree .
- *= require bootstrap-material-design
  *= require_self
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 @import "bootstrap-material-design";
 
 #log1{
@@ -30,3 +30,16 @@
 	top: 88vh;
 	right: 8px;
 }
+
+#trigger-overlay:hover{background-color:transparent !important;}
+#logo-img:hover{background-color: transparent !important;}
+#homepagesections a:hover{background-color: transparent !important;}
+.asa a:hover{background-color: transparent !important;}
+.learn-btn{color:#ffffff !important;}
+.learn-btn:hover{color:#72d0da !important;}
+
+/*-----------BANNER SECTION CSS----------*/
+.use-btn2{background-color: #72cfd9 !important;color:#ffffff !important;transition:all 0.4s ease !important;}
+	.use-btn2:hover{background-color: #ffffff !important;color:#010101 !important;}
+
+/*---------BANNER SECTION END---------*/	
