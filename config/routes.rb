@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get '/admin', to: 'dash#index', as: 'admin'
   devise_for :users, :controllers => { :registrations => "registrations" } 
   resources :about_pages
-
+  #routes
 end
