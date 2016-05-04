@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :logo_texts
+  resources :menu_items
+  resources :testimonials
+  resources :courses
+  resources :corporate_trainer_headings
+  resources :corporate_trainers
+  resources :pm_logos
+  resources :pm_texts
   resources :banner_sections
   resources :positions do
     resources :requirement_categories
@@ -19,7 +27,10 @@ Rails.application.routes.draw do
   post 'home/custom'
   get '/careers', to: 'home#career', as: 'careers'
   get '/admin', to: 'dash#index', as: 'admin'
+
   devise_for :users, :controllers => { :registrations => "registrations" } 
   resources :about_pages
+  
   #routes
 end
+

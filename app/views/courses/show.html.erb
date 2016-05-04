@@ -1,0 +1,41 @@
+<div style="width:88%;margin:0 auto;padding:2%;padding-left:5%;">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Corporate trainers</strong>
+  <% @course.corporate_trainers.all.each do |k|%>
+          <ul>
+            <li><%=k.name%></li>
+          </ul>
+        <%end%>
+
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @course.duration %>
+</p>
+
+<p>
+  <strong>Batch starting on:</strong>
+  <%= @course.batch_starting_on %>
+</p>
+
+<p>
+  <strong>Fee:</strong>
+  <%= @course.fee %>
+</p>
+
+<p>
+  <strong>Highlights:</strong>
+  <%= @course.highlights %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
+</div>

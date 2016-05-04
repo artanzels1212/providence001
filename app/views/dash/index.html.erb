@@ -16,4 +16,26 @@
 			</h3>
 		</div>
 	</div>
+
+	<div class="panel panel-warning">
+	<%if current_user.admin?%>
+		<div class="panel-heading">
+			USERS
+		</div>
+		<%User.all.each do |user|%>
+		
+			<div class="panel-body">
+
+				<h4><span class="badge">id:<%=user.id%></span>Email: <%=user.email%></h4>
+				
+				<p>Admin: <%=user.admin%></p>
+				<p>User Signed In "<%=user.sign_in_count%>" Times</p>
+				<p>User Current sign in at <%=user.current_sign_in_at.strftime("%B %-d, %Y")%></p>
+				<p>User Last sign in at <%=user.last_sign_in_at.strftime("%B %-d, %Y")%></p>	
+			</div>
+			<hr>
+
+		<%end%>
+	<%end%>	
+	</div>
 </div>

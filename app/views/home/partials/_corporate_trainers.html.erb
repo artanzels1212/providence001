@@ -1,0 +1,28 @@
+<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 nopadding">
+						<div style="background-color:#3f6184;padding-bottom:1px;">
+							<div class="texture-overlay"></div>
+							<div class="headingct"><h2><%=CorporateTrainerHeading.last.heading.upcase%></h2></div>
+								<div id="ppad" class="owl-carousel">
+									<%CorporateTrainer.all.each do |corporate_trainer|%>
+										<div class="item pad">
+											<div class="ad"><img src="<%=corporate_trainer.img%>"></div>
+											<h4><%=corporate_trainer.name.capitalize%></h4>
+											<h5><%=corporate_trainer.designation.capitalize%></h5>
+										</div>	
+									<%end%>
+								</div>
+							</div> 
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+		
+
+
+
+			
+  

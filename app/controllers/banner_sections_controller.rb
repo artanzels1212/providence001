@@ -70,6 +70,6 @@ class BannerSectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def banner_section_params
-      params.require(:banner_section).permit(:banner_img, :banner_heading, :banner_button_text, :banner_button_url)
+      params.require(:banner_section).permit(:banner_img, :banner_heading, :banner_button_text, :banner_button_url, :banner_button2_text, :banner_button2_url)
     end
 end

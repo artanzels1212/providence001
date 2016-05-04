@@ -1,0 +1,24 @@
+		<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+
+						<h2 class="heading1" style="border-bottom:2px solid #3f6184;margin-bottom:5%;margin-top:-1%;">Placements &amp; Mentorship</h2>
+						
+						<div class="owl-carousel" style="">
+						  <%PmLogo.all.order("position ASC").each do |logo|%>
+						  	<div class="item"> <%=image_tag logo.logo(:thumb)%> </div>
+						  <%end%>
+						</div>
+						<div>
+							<p><%=PmText.last.bottom_text.capitalize%></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<div >
+          
+
+<%=javascript_tag do%>
+	$(".owl-carousel").owlCarousel();
+<%end%>

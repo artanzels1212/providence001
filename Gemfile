@@ -35,3 +35,9 @@ group :development do
 end
 
 gem "font-awesome-rails"
+gem 'owlcarousel2-rails', github: 'openscript/owlcarousel2-rails'
+gem 'jquery-turbolinks'
+gem 'compass-rails'
+gem 'chosen-rails'
+# gem 'cancan', '1.4.1'
+# gem 'mongo', '1.1.5'

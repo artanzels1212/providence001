@@ -11,8 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require chosen-jquery
+//= require owl.carousel
 //= require bootstrap-material-design
+//= require masonry.pkgd
 //= require turbolinks
 //= require_tree .
